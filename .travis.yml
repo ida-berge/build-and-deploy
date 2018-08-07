@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build 
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: ida-build-and-deploy
+  skip_cleanup: true 
+  api_key:
+    secure: LoFpJ8voYJbLfweBVNLxjQ/TYmFVxRkfRIacWt1/yWn+XHY5uJXZOMQkkwTbHikw4GQUgCkZwBKS/SUg2wL90tLPm8dQCCLYMBlKCfOaTiivk2CIfeCwWMTmxDmYPJ+5RALBy3erNdNMScnqhKA+lmc7gJcxG+5i8Za8DnINlgVaEwxryPfoP9EQ5KLT8QpNV0W4Q325TvM2A94aRd+J6G0GVcwOk+NPufw/cHR/VZdKzI1rny9QtPjWlKklnOWFpaSO6++rooMfetfJDNn9PVkgEmK1qmWOH0q4REET+tCQsDqSdKOI5MojP2tjQi80lC51BDzJDNIcRnzmm1ZDTUQvhzmUbbPGcEQcovCBVUDL+V2rHj+yGk9UlZSrKHfh+EBTQE6yPStAcP8pUo6NNGGXUUis/NGhYhAN7grr5YkLWaoioO1gNBdgurEiJRkQeKbkQCUzrcjb0wUNrl2Y/qe6dy1gFZE024a+SeGjpT6HCGtdwEo5npz5hiuHWOMfos0Vpzb6zsE8imyxR68/gOUxqM71yWLrbgV8QKZ2sUZfSlFcwpLw7knFjOug/WmFscX+1PpqPxO3124kn7VM+mJZEQgUxvETEBE2c25skZsF+YICRRU9eeCq/T4OVMAkHFg853duhKzsfnETLojVyi+ZBBZdaFFuqVui712P+9I=
